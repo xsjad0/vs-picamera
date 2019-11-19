@@ -1,0 +1,19 @@
+.image-container {
+    width: (1024/2)px;
+    height: (768/2)px;
+    padding: 5px;
+    border: 2px black;
+}
+
+img {
+    width: 85%;
+    height: auto;
+}
+
+li {
+    padding: 5px;
+}
+
+button {
+    margin: 5px;
+}
