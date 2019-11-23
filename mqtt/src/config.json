@@ -1,0 +1,8 @@
+{
+    "mqtt": {
+        "broker": "localhost",
+        "port": 1883,
+        "keep_alive": 60,
+        "topic": "pi/camera"
+    }
+}
