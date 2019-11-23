@@ -1,7 +1,11 @@
 import os
+import logging
 import cherrypy
 from time import sleep
 from picamera import PiCamera
+
+logging.basicConfig(level=os.environ.get("LOGLEVEL", "DEBUG"))
+logger = logging.getLogger("[rest_webservice]")
 
 static_dir = os.path.abspath(os.getcwd())
 image_dir = static_dir + '/public/images/'
@@ -20,13 +24,16 @@ class CameraWebService():
         pass
 
     def GET(self):
+        logger.debug("return image")
         return image_default_name
 
     def POST(self):
+        logger.debug("capture snapshot")
         with PiCamera() as camera:
             camera.capture(image_dir + image_default_name)
 
     def DELETE(self):
+        logger.debug("delete image")
         os.remove(image_dir + image_default_name)
 
 
