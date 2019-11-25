@@ -8,9 +8,7 @@ import paho.mqtt.publish as publish
 from picamera import PiCamera
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "DEBUG"))
-logger = logging.getLogger("[mqtt_pub]")
-
-app_path = os.path.abspath(os.getcwd())
+logger = logging.getLogger("[pi-camera]")
 
 
 def main():
@@ -52,7 +50,7 @@ def video_stop():
 
 
 def delete():
-    logger.info('delete storage')
+    logger.info('delete captured files')
     pub('delete')
 
 
@@ -62,7 +60,7 @@ def pub(payload):
         config = json.load(config_file)['mqtt']
 
     publish.single(
-        config['topic'], payload='{\'cmd\':\'' + str(payload) + '\'}', hostname=config['broker'], port=config['port'], keepalive=config['keep_alive']
+        config['topic'], payload='{\"cmd\":\" + str(payload) + "\'}', hostname=config['broker'], port=config['port'], keepalive=config['keep_alive']
     )
 
 
