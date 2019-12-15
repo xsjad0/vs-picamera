@@ -52,6 +52,8 @@ def capture():
 def video_start():
     logger.info("start video recording")
     camera.start_recording(vid_path)
+    camera.wait_recording(60)
+    camera.stop_recording()
 
 
 def video_stop():
