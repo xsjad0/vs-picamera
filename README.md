@@ -48,3 +48,13 @@ Es ist ein Docker-Container aufzusetzen, der den RESTfull Webservice aus Aufgabe
 | Anwender     | über **docker run** das PICAMERA Image als Container starten.                                           | die Anforderungen aus Aufgabe 1 und 2 überprüft werden können. |
 
 <center> Tabelle: User Story - Docker-Container </center>
+
+### Überarbeitete User-Story
+
+| Als          | will ich                                                                                                | damit                                                          |
+|--------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| Studierender | selbständig, alle erforderlichen Libraries und Funktionalitäten studieren, überprüfen und installieren. | er den Server implementieren kann.                             |
+| Studierender | ein Image __web__ für die Anwendung aus Aufgabe 1 sowie ein Image __mqtt__ mit der Anwendungen aus 2 jeweils über **docker build** generieren.            | die Anwendungen im Docker-Container ausgeführt werden können.  |
+| Anwender     | über **docker run** die beiden Images als Container starten.                                           | die Anforderungen aus Aufgabe 1 und 2 überprüft werden können. |
+
+<center> Tabelle: User Story - Docker-Container (überarbeitet)</center>
