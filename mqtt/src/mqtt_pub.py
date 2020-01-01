@@ -5,7 +5,6 @@ import logging
 import json
 from manager import Manager
 import paho.mqtt.publish as publish
-from picamera import PiCamera
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "DEBUG"))
 logger = logging.getLogger("[pi-camera]")
