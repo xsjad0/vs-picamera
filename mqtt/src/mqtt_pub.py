@@ -59,7 +59,7 @@ def pub(payload):
         config = json.load(config_file)['mqtt']
 
     publish.single(
-        config['topic'], payload='{\"cmd\":\" + str(payload) + "\'}', hostname=config['broker'], port=config['port'], keepalive=config['keep_alive']
+        config['topic'], payload="{\"cmd\":\"" + str(payload) + "\"}", hostname=config['broker'], port=config['port'], keepalive=config['keep_alive']
     )
 
 
